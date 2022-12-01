@@ -10,29 +10,29 @@
    } // end outer if statement
   ```
   * **YOUR WRITING HERE**
-
+(((year % 100 != 0) && (year % 4 == 0)) || (year % 400 == 0))
 
 2. Label each as either correct or incorrect syntax. If incorrect, rewrite below:
   * if (x == y) {
 
     * **YOUR WRITING HERE**
-
+correct
   * if [x == 10] {
 
     * **YOUR WRITING HERE**
-
+incorrect
   * if x = 10 then {
 
     * **YOUR WRITING HERE**
-
+incorrect
   * if (x equals 42) {
 
     * **YOUR WRITING HERE**
-
+incorrect
   * if (x => y) {
 
     * **YOUR WRITING HERE**
-
+correct
 
 3. Fix the error in the code below:
 
@@ -45,4 +45,8 @@
   }
   ```
 
-  * **YOUR WRITING HERE**
+String name = console.nextLine();
+  if (name.equals("blue")) {
+      System.out.println("Mine, too!");
+  }
+  ```
