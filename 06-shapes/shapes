@@ -1,0 +1,54 @@
+public class Main {
+    public static void main(String[] args) {
+        rectangle(2, 9);
+        System.out.println("");
+        rightTriangle(3);
+        System.out.println("");
+        triangle(6);
+    }
+
+    /*public static void shape(int s) {
+        *//*System.out.println("* * * *" + "\n" + "* * * *" + "\n" + "* * * *" + "\n" + "* * * *");
+
+        int counter = 0;*//*
+        String starLenght = "";
+
+        for (int i = 0; i < s; i++) {
+            do {
+                starLenght += "* ";
+            } while (starLenght.length() < s * 2);
+            System.out.println(starLenght); starLenght = "";
+        }
+    }*/
+
+    public static void rightTriangle(int num) {
+        String starLenght = "";
+        for (int i = 0; i < num; i++) {
+            starLenght += "* ";
+            System.out.println(starLenght);
+        }
+    }
+
+    public static void rectangle(int l, int w) {
+        int counter = 0;
+        String starLenght = "";
+        for (int i = 0; i < l; i++) {
+            for (int j = 0; j < w; j++) {
+                System.out.print("*");
+            }
+            System.out.println("*");
+        }
+    }
+
+    public static void triangle(int num) {
+        for (int i = 0; i < 10; i++) {
+            for (int j = 1; j < 10 - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < 2 * i - 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
