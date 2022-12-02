@@ -1,0 +1,72 @@
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(concatenation("abc", "cat"));
+        System.out.println(halfLenght("WooHoo"));
+        System.out.println(Weird("Hello", 3));
+        System.out.println(howMany("hihiHello"));
+        System.out.println(removed("Hello", "llo"));
+        System.out.println(numbers("vieeroi333"));
+        System.out.println(sarcastick("I LIKe chips"));
+        int q = 1; int a = 10;
+    }
+
+    public static String concatenation(String word_1, String word_2) {
+        if (word_1.substring(word_1.length() - 1).equals(word_2.substring(0, 1))) {
+            return word_1 + word_2.substring(1);
+        } else {
+            return word_1 + word_2;
+        }
+    }
+
+    public static String halfLenght(String word) {
+        return word.substring(0, word.length() / 2);
+    }
+
+    public static String Weird(String word, int repetitions) {
+        String phrase = "";
+        for (int i = 0; i < repetitions; i++) {
+            phrase += word.substring(word.length() - repetitions);
+        }
+        return phrase;
+    }
+
+    public static int howMany(String word) {
+        int counter = 0;
+        for (int i = 0; i < word.length(); i++) {
+            if (word.substring(i, i + 1).equals("h") && word.substring(i + 1, i + 2).equals("i")) {
+                counter += 1;
+            }
+        }
+        return counter;
+    }
+
+    public static String removed(String word, String remove) {
+        return  word.replace(remove, "");
+    }
+
+    public static int numbers (String word) {
+        int sum = 0;
+        for (int i = 0; i < word.length(); i++) {
+            char c = word.charAt(i);
+            if (Character.isDigit(c) == true) {
+                sum += Integer.parseInt(word.substring(i, i + 1));
+            }
+        }
+        return sum;
+    }
+
+    public static String sarcastick(String phrase) {
+        String newPhtase = "";
+        for (int i = 0; i < phrase.length(); i++) {
+            String c = phrase.substring(i, i + 1);
+            if (i % 2 != 1 && !c.equals(" ")) {
+                newPhtase += c.toLowerCase();
+            } else if (i % 2 != 0 && !c.equals(" ")) {
+                newPhtase += c.toUpperCase();
+            } else {
+                newPhtase += c;
+            }
+        }
+        return newPhtase;
+    }
+}
